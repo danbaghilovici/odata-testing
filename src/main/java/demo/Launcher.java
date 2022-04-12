@@ -21,8 +21,11 @@ public class Launcher {
             ODataRequest oDataRequest=new ODataRequest();
             oDataRequest.setRawBaseUri("http://localhost:8080/DemoService/DemoService.svc/");
             oDataRequest.setMethod(HttpMethod.GET);
+            oDataRequest.setProtocol("HTTP/1.1");
             ODataResponse process = handler.process(oDataRequest);
-            System.out.println(process.getContent());
+
+            System.out.println("aici");
+            System.out.println(process.getContent().);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
